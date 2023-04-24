@@ -13,28 +13,33 @@ function App() {
   
   const [todoData, setTodoData] = useState([
     {
-      name: "Regar as plantas",
+      name: "Learn HTML",
+      complete: true,
+      id: uuidv4()
+    },
+    {
+      name: "Learn CSS",
+      complete: true,
+      id: uuidv4()
+    },
+    {
+      name: "Learn Node.JS",
+      complete: true,
+      id: uuidv4()
+    },
+    {
+      name: "Learn React.JS",
       complete: false,
       id: uuidv4()
     },
     {
-      name: "Tomar 2 litros de água",
+      name: "Learn TypeScript",
       complete: false,
       id: uuidv4()
     },
     {
-      name: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.",
-      complete: true,
-      id: uuidv4()
-    },
-    {
-      name: "Comprar frango",
-      complete: true,
-      id: uuidv4()
-    },
-    {
-      name: "Verificar meus emails",
-      complete: true,
+      name: "Learn Next.JS",
+      complete: false,
       id: uuidv4()
     },
     
@@ -56,11 +61,12 @@ function App() {
     ])
   }
 
-  function toggleComplete(todoId) {
-    setTodoData([
-      ...todoData,
-      todoData.find(todo => todo.id === todoId).complete = true
-    ])
+  function toggleComplete(changedTodoId) {
+    setTodoData( prevTodos => prevTodos.map( todo => {
+      return todo.id == changedTodoId ? {...todo, complete: !todo.complete} : todo
+    }) )
+
+    console.log(changedTodoId)
   }
   
   return (

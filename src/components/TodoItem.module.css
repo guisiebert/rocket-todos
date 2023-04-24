@@ -16,22 +16,30 @@ p {
 }
 
 .unchecked {
-    border-radius: 999px;
-    width: 18px;
-    height: 12px;
-    /* padding: 5px; */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--blue);
     cursor: pointer;
-    outline: 2px solid var(--blue);
+}
+
+.unchecked:hover {
+    border: 2px solid var(--blue-dark);
 }
 
 .checked {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
     background-color: var(--purple-dark);
-    border-radius: 999px;
-    width: 18px;
-    height: 18px;
     padding: 5px;
     cursor: pointer;
 }
+
+.checked:hover {
+    background-color: var(--purple);
+}
+
 
 p {
     padding-right: 10px;

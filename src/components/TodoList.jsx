@@ -1,5 +1,6 @@
 import style from './TodoList.module.css'
 import {TodoItem} from './TodoItem.jsx'
+import { ZeroItems } from './ZeroItems'
 
 export function TodoList({todoData, onDelete, onToggle}) {
 
@@ -25,6 +26,8 @@ export function TodoList({todoData, onDelete, onToggle}) {
                     onDelete={onDelete}
                     onToggle={onToggle}
                 /> )}
+
+                {todoData.length > 0 ? null : <ZeroItems />}
             </div>
         </div>
     )

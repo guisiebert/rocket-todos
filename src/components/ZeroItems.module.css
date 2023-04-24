@@ -1,0 +1,22 @@
+.zeroItems {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    border-top: 1px solid var(--gray-500);
+
+    padding: 4rem;
+
+}
+
+.zeroItems > p,strong {
+    color: var(--gray-300);
+}
+
+.zeroItems > img {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+}
