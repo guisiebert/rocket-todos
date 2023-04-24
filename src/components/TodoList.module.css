@@ -1,0 +1,38 @@
+.statusBar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tasksCreated {
+    font-size: 0.875rem;
+    color: var(--blue);
+}
+
+.createdNumber {
+    font-size: 0.75rem;
+    background-color: var(--gray-400);
+    padding: 0.125rem 0.5rem;
+    border-radius: 999px;
+
+}
+
+.tasksComplete {
+    margin-left: auto;
+    font-size: 0.875rem;
+    color: var(--purple);
+
+
+}
+
+.completeNumber {
+    font-size: 0.75rem;
+    background-color: var(--gray-400);
+    padding: 0.125rem 0.5rem;
+    border-radius: 999px;
+
+}
+
+.list {
+    margin-top: 1.5rem;
+}
